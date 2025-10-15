@@ -1,21 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    {% load static %}
+
     {% load pwa %}
     {% progressive_web_app_meta %}
 
     <title>{% block title %}Hangarin{% endblock %}</title>
-
-    <link rel="icon" type="image/x-icon" href="{% static '\vendor\fontawesome-free\svgs\regular\grimace.svg' %}"> 
     <link rel="stylesheet" href="{% static 'css/sb-admin-2.min.css' %}">
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link
@@ -49,30 +48,23 @@
                     <span>Dashboard</span></a>
             </li>
 
-            
+
             <!-- Divider -->
             <hr class="sidebar-divider">
-            
+
             <!-- Heading -->
             <div class="sidebar-heading">
                 Task Manager
             </div>
-
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>To-Do</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Inconvenient, gusto ko</h6>
-                        <h6 style="padding-top: 2px;" class="collapse-header">lang magamit hehe.</h6>
-                        <a class="collapse-item" href="{% url 'task-list' %}">Tasks</a>
-                        <a class="collapse-item" href="{% url 'subtask-list' %}">Subtasks</a>
-                    </div>
-                </div>
+                <a class="nav-link" href="{% url 'task-list' %}">
+                    <i class="fas fa-fw fa-comments"></i>
+                    <span>Task</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'subtask-list' %}">
+                    <i class="fas fa-fw fa-comments"></i>
+                    <span>Subtask</span></a>
             </li>
 
             <li class="nav-item">
@@ -81,13 +73,7 @@
                     <span>Notes</span></a>
             </li>
 
-            <hr class="sidebar-divider">
             
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Task Categorization
-            </div>
-
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'priority-list' %}">
                     <i class="fas fa-fw fa-calendar"></i>
@@ -288,9 +274,9 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-3 d-none d-lg-inline text-gray-600"><b>{{ request.user.username }}</b></span>
-                                <img class="img-profile rounded-circle"
-                                    src="{% static 'img/undraw_profile.svg'%}">
+                                <span class="mr-3 d-none d-lg-inline text-gray-600"><b>{{ request.user.username
+                                        }}</b></span>
+                                <img class="img-profile rounded-circle" src="{% static 'img/undraw_profile.svg'%}">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -330,9 +316,9 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Hangarin ni Elibap 2025</span>
+                        <span>Copyright &copy; Hangarin 2025</span>
                     </div>
-                </div>
+                </div>x
             </footer>
             <!-- End of Footer -->
 
@@ -375,13 +361,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
- 
-    <!-- Page level plugins -->
-    <!-- <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script> -->
 
-    <!-- Page level custom scripts -->
-<!--     <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
-    <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script> -->
 
 </body>
 

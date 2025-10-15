@@ -22,16 +22,10 @@ class HomePageView(LoginRequiredMixin, ListView):
         completed_tasks = Task.objects.filter(
             status="Completed"
         ).count()
-
-        percentage_done=0
-
-        if count > 0:
-            percentage_done = (completed_tasks / count) * 100
-        else:
-            percentage_done = 0
+        
         
         context["total_tasks"] = count
-        context["tasks_done"] = percentage_done
+        context["tasks_done"] = completed_tasks
         return context
 
 # ====================================================   TASK
