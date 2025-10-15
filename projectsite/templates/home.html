@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Home</h4>
+        <div class="row">
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    <p class="card-category">Students</p>
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><h4 class="card-title">{{total_students}}</h4></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="la la-users fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    <p class="card-category">Joined This Year</p>
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><h4 class="card-title">{{students_joined_this_year}}</h4></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="la la-bar-chart fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    <p class="card-category">Organizations</p>
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ total_organizations }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="la la-newspaper-o fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    <p class="card-category">Number of Programs</p>
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ total_programs }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="la la-check-circle fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Page Title</div>
+                        <div class="card-category">Page Subtitle</div>
+                    </div>
+                    <div class="card-body">Hello, World</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
