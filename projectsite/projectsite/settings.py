@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-*u-0%yih3g(w79@i47zq@%qbupmy^=@kg)_k4)+b1npemn56si
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ygglue0hangarin.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['rudgeee.pythonanywhere.com', '127.0.0.1']
 
 if "pythonanywhere" in socket.gethostname():
     SITE_ID = 4
